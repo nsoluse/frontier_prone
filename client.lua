@@ -94,22 +94,21 @@ function ProneMovement()
             moveDir.bwd = false
         end
 
-        if IsControlJustPressed(0, 0xB4E465B4) and not moveDir.lft then -- A
+        if IsControlJustPressed(0, 0x7065027D) and not moveDir.lft then -- A
             moveDir.lft = true
-            TaskPlayAnimAdvanced(ped, "mech_crawl@base", "run_turn_r3", GetEntityCoords(ped), 0.0, 0.0, GetEntityHeading(ped), 1.0, 1.0, 1.0, 1, 1.0, 0, 0)
+            TaskPlayAnimAdvanced(ped, "mech_crawl@base", "run_turn_l3", GetEntityCoords(ped), 0.0, 0.0, GetEntityHeading(ped), 1.0, 1.0, 1.0, 1, 1.0, 0, 0)
 
-        elseif IsControlJustReleased(0, 0xB4E465B4) and moveDir.lft then
-            TaskPlayAnimAdvanced(ped, "mech_crawl@base", "run_turn_r3", GetEntityCoords(ped), 0.0, 0.0, GetEntityHeading(ped), 1.0, 1.0, 1.0, 2, 1.0, 0, 0)
+        elseif IsControlJustReleased(0, 0x7065027D) and moveDir.lft then
+            TaskPlayAnimAdvanced(ped, "mech_crawl@base", "run_turn_l3", GetEntityCoords(ped), 0.0, 0.0, GetEntityHeading(ped), 1.0, 1.0, 1.0, 2, 1.0, 0, 0)
             moveDir.lft = false
         end
 
-        if IsControlJustPressed(0, 0x7065027D) and not moveDir.rht then -- D
+        if IsControlJustPressed(0, 0xB4E465B4) and not moveDir.rht then -- D
             moveDir.rht = true
-            TaskPlayAnimAdvanced(ped, "mech_crawl@base", "run_turn_l3", GetEntityCoords(ped), 0.0, 0.0, GetEntityHeading(ped), 1.0, 1.0, 1.0, 1, 1.0, 0, 0)
+            TaskPlayAnimAdvanced(ped, "mech_crawl@base", "run_turn_r3", GetEntityCoords(ped), 0.0, 0.0, GetEntityHeading(ped), 1.0, 1.0, 1.0, 1, 1.0, 0, 0)
 
-        elseif IsControlJustReleased(0, 0x7065027D) and moveDir.rht then
-            TaskPlayAnimAdvanced(ped, "mech_crawl@base", "run_turn_l3", GetEntityCoords(ped), 0.0, 0.0, GetEntityHeading(ped), 1.0, 1.0, 1.0, 2, 1.0, 0, 0)
+        elseif IsControlJustReleased(0, 0xB4E465B4) and moveDir.rht then
+            TaskPlayAnimAdvanced(ped, "mech_crawl@base", "run_turn_r3", GetEntityCoords(ped), 0.0, 0.0, GetEntityHeading(ped), 1.0, 1.0, 1.0, 2, 1.0, 0, 0)
             moveDir.rht = false
-        end
     end
 end
